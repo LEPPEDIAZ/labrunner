@@ -1,9 +1,9 @@
 /* Programa Laboratorio no.10 */
 
-/* Autor: José Rodolfo Pérez  */
-/* Carné: 16056 */
-/* Autor: Ana Lucia Lopez  */
-/* Carné: 151378 */
+/* Autor: JosÃ© Rodolfo PÃ©rez  */
+/* CarnÃ©: 16056 */
+/* Autor: Ana Lucia Leppe  */
+/* CarnÃ©: 151378 */
 
 /* Descripcion del Porgrama: programa que enciende 3 leds consecutivamente */ 
 
@@ -151,4 +151,7 @@ sleepLoop:
 myloc: .word 0
 
  .end
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
