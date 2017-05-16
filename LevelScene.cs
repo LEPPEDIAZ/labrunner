@@ -44,7 +44,7 @@ public class LevelScene : MonoBehaviour {
 
     //*********************
     ThirdPersonCharacter runnerChar;
-
+    //se define a la tercera persona 
     int buttonWidth = 25;
     int buttonHeight = 25;
     int textWidth = 100;
@@ -55,7 +55,7 @@ public class LevelScene : MonoBehaviour {
     float moveLeft = 0.05f;
     float moveRight = 0.05f;
 
-    // Use this for initialization
+    // se usa para la inicializacion
     void Start()
     {
         PlayerPrefs.SetInt("Level", level);
@@ -219,8 +219,7 @@ public class LevelScene : MonoBehaviour {
                 //player move down
                 MovePlayerForward(moveDown);
             }
-
-            //*********CAMERA
+            //camara
 
             GUI.Label(new Rect(10, Screen.height - (buttonHeight * 10 + 10), textWidth, textHeight), "Rotate Camera");
 
@@ -282,7 +281,7 @@ public class LevelScene : MonoBehaviour {
             }
         }
     }
-
+    //movimientos del jugador.
     void MoveForward(float axis)
     {
         var forwardMoveAmount = axis * translateRate;
