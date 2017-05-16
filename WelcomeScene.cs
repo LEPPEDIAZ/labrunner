@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//esta no esta funcionando tan bien
 public class WelcomeScene : MonoBehaviour {
 
     public Texture welcomeBackgroundTexture;
