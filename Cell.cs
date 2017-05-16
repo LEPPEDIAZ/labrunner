@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,39 +9,20 @@ public class Cell {
     //codigo obtenido de internet
 	/// <summary>
     /// ve el valor para determinar si el bottom wall sigue parado
-    /// </summary>
     public bool BottomWall { get; private set; }
     /// <summary>
     /// lista de celulas conectadas
     /// dos cells conectadas
-    /// </summary>
     public List<Cell> ConnectedCells { get; private set; }
-    /// <summary>
-    /// 
-    /// </summary>
     public int Column { get; internal set; }
-    /// <summary>
-    /// </summary>
     public bool ExitCell { get; internal set; }
-    /// <summary>
-    /// </summary>
     public bool LeftWall { get; private set; }
-    /// <summary>l
-    /// </summary>
     public Maze Maze { get; private set; }
-    /// <summary>
-    /// </summary>
     public bool RightWall { get; private set; }
-    /// <summary>
-    /// </summary>
     public int Row { get; internal set; }
-    /// <summary>
-    /// </summary>
     public bool TopWall { get; private set; }
-    /// <summary>
-    /// </summary>
     public bool Visited { get; internal set; }
-
+	
     public Cell(Maze container)
     {
         BottomWall = LeftWall = RightWall = TopWall = true;
@@ -50,9 +31,8 @@ public class Cell {
         Maze.Drawing += Cell_Drawing;
     }
 
-    /// <summary>
-    /// </summary>
-    /// <param name="cell"></param>
+
+//condicion de las paredes, define todas las paredes del laberinto y si no las toca. tambien marca el lugar de salida.
     public void Connect(Cell cell)
     {
         if (ConnectedCells == null)
@@ -86,9 +66,7 @@ public class Cell {
             this.RightWall = cell.LeftWall = false;
         }
     }
-    /// <summary>
-    /// </summary>
-    /// <returns></returns>
+
     public IEnumerable<Cell> GetNeighbours()
     {
         if (neighbours != null)
@@ -135,6 +113,7 @@ public class Cell {
             runner.transform.position = new Vector3(x - (horiWallScale / 2), 0, z + (vertWallScale / 2));
             runner.transform.localScale = new Vector3(0.5f * e.Scale, 0.5f * e.Scale, 0.5f * e.Scale);
         }
+
 
 
         if (TopWall)
