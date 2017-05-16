@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-
+//interfaz no funcionan los niveles, solo me dio tiempo de hacer uno. el juego es con tiempo por lo que tiene duraciones
 public class Game {
     public static float Duration { get; set; }
     public static GameStates GameState { get; set; }
